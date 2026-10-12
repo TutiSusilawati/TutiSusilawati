@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Jam Digital</title>
+</head>
+<body>
+    <h1>Waktu Sekarang</h1>
+    <h2 id="jam"></h2>
+
+    <script>
+        function tampilkanWaktu() {
+            const sekarang = new Date();
+
+            document.getElementById("jam").textContent =
+                sekarang.toLocaleTimeString("id-ID", {
+                    timeZone: "Asia/Jakarta"
+                });
+        }
+
+        tampilkanWaktu();
+        setInterval(tampilkanWaktu, 1000);
+    </script>
+</body>
+</html>
